@@ -1,0 +1,13 @@
+1. xpath to find all children 'a' tags in the 'topics' class table is hardcoded for moodle page
+2. format of moodle pdf links is hardcoded to sort the links in pdf_download
+3. xpath of course page is coded based off user input, but format is hardcoded
+4. Download directory is hardcoded, and moodle url
+5. chrome preferences are hard coded
+6. xpath to find download button in a folder is hardcoded
+7. All wait times are hardcoded; this might need to change based on the system
+
+Xpaths used:
+
+//*[text()='coure_num']//ancestor::a[1]   	- this finds the course button associated with 'course_num', and assumes the course list menu is open on the left of the web page by default
+//ul[@class='topics']//child::a	 	  	- this finds all 'a' tag children in the main web 'ul' list on the course page
+//section[@id='region-main']//child::button[1]	- this finds the download button on a folder web page
