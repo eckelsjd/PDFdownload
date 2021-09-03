@@ -17,7 +17,7 @@ import time
 
 # Global Constants.
 MOODLE_URL = "https://moodle.rose-hulman.edu/login/index.php"
-DOWNLOAD_DIR = "C:\\Users\\eckelsjd\\source\\repos\\SeleniumProjects\\PDFdownload\\downloads"
+DOWNLOAD_DIR = "C:\\Users\\eckelsjd\\git_projects\\PDFdownload\\downloads"
 ZIP_EXT = ".zip"
 username_KEY = "username"
 PASSWORD_KEY = "password"
@@ -53,6 +53,7 @@ def get_driver(browser):
         prefs["download.extensions_to_open"] = "applications/pdf"
         prefs["profile.default_content_settings.popups"] = 0;
         prefs["plugins.always_open_pdf_externally"] = True
+        prefs["safebrowsing.enabled"] = False
 
         chrome_options.add_experimental_option("prefs",prefs)
         return webdriver.Chrome(driver_path,
